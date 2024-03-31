@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+.text{
+  font-size: 20px;
+  background-color:rgb(56, 56, 193); 
+  color: white;
+  padding: 10px 15px;
+}
+.age-controller{
+  margin: 5px 15px;
+  height: 10px;
+}
+.upload-photo {
+  margin-bottom: 20px;
+}
+.btn-suuccess{
+  background-color:rgb(56, 56, 193); 
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  display: inline;
+  margin-left: 10px;
+}
+.btn-cancel{
+  color:rgb(56, 56, 193); 
+  background-color: white;
+  padding: 8px 30px;
+  border-width: 2px;
+  display: inline;
+}

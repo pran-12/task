@@ -1,0 +1,62 @@
+<div class="container mt-4">
+  <h1 class="text">Register</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="registerFn()">
+    <div class="upload-photo">
+      <input type="file" (change)="onFileSelected($event)" />
+    </div>
+  <div class="mb-3">
+    <label for="fname" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="fname" placeholder="First name" formControlName="fname">
+  </div>
+  <div class="mb-3">
+    <label for="lname" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lname" placeholder="Last name" formControlName="lname">
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input type="range" min="18" max="100" value="18" class="age-controller" id="age" placeholder="Age" formControlName="age">
+    
+  </div>
+
+  <div class="mb-3">
+    <label for="mobile" class="form-label">Mobile</label>
+    <input type="text" class="form-control" id="mobile" placeholder="Mobile Number" formControlName="age">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control" id="email" placeholder="Email address" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label for="state" class="form-label">State</label>
+    <input type="text" class="form-control" id="state" placeholder="State" formControlName="state">
+  </div>
+  <div class="mb-3">
+    <label for="country" class="form-label">Country</label>
+    <input type="country" class="form-control" id="country" placeholder="Country" formControlName="country">
+  </div>
+
+  <div class="mb-3">
+    <select id="addressDropdown" formControlName="addressType">
+      <option value="home">Home</option>
+      <option value="company">Company</option>
+  </select>
+  <div *ngIf="registerForm.get('addressType').value === 'home'">
+      <input type="text" id="homeAddress1" formControlName="address1">
+      <input type="text" id="homeAddress2" formControlName="address2">
+  </div>
+  <div *ngIf="registerForm.get('addressType').value === 'company'">
+      <input type="text" id="companyAddress1" formControlName="companyAddress1">
+      <input type="text" id="companyAddress2" formControlName="companyAddress2">
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="tags" class="form-label">Tags</label>
+    <input type="tags" class="form-control" id="tags" placeholder="Tags" formControlName="tags" pattern="[A-Za-z]{1,20}" maxlength="20">
+  </div>
+  <div class="mb-3" >
+    <button class="btn-cancel">Cancel</button>
+    <input type="submit" class="btn-suuccess">
+  </div>
+  
+  </form>
+</div>
